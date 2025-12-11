@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(192, 254, 234);
+}
+#qoute {
+    font-size: 24px;
+    margin: 20px;
+    color: rgb(36, 92, 74);;
+}
+#qoute-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(36, 92, 74);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#qoute-btn:hover {
+    background-color: rgb(28, 70, 56);
+}
+h1 {
+    color: rgb(36, 92, 74);
+}
