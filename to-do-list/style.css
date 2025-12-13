@@ -1,0 +1,202 @@
+/* Reset & fundamentals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-1: #f5f7fb;
+  --bg-2: #e8eefb;
+  --accent: #6b9cff;
+  --muted: #6b7280;
+  --danger: #ff6b6b;
+  --card-bg: #ffffff;
+  --glass: rgba(255,255,255,0.65);
+}
+
+/* Page layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 48px 20px;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111827;
+}
+
+/* Main app card that holds the layout. We style body children to appear inside a centered card */
+main,
+body > .todo-card {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(35, 47, 63, 0.12);
+}
+
+/* Headings */
+h1 {
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  letter-spacing: -0.02em;
+  color: #0b1a3a;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+/* Input + Add button row — inline form */
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: center;
+  justify-content: stretch;
+}
+
+/* Since there is no wrapper element in HTML, we style the input & button directly */
+#itemInput {
+  margin-bottom: 10px ;
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  background: #fff;
+  font-size: 1rem;
+  color: #102a43;
+  outline: none;
+  box-shadow: inset 0 1px 4px rgba(16,24,40,0.03);
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+/* If you want a group look with the Add button */
+button[onclick="addItem()"] {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, var(--accent), #547ee0);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 18px rgba(95, 118, 230, 0.18);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s;
+}
+
+/* Hover & active states */
+#itemInput:focus {
+  border-color: rgba(107, 156, 255, 0.8);
+  box-shadow: 0 6px 30px rgba(107, 156, 255, 0.12);
+}
+
+button[onclick="addItem()"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(95, 118, 230, 0.22);
+}
+
+button[onclick="addItem()"]:active {
+  transform: translateY(0);
+  opacity: 0.95;
+}
+
+/* Items list */
+#items {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each item card (we target the JS-created children #items > div) */
+#items > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  box-shadow: 0 6px 14px rgba(12, 18, 29, 0.03);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Text element of each item: keep inline as in your JS */
+#items p {
+  display: inline;
+  margin-right: 12px;
+  color: #0b1a3a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Delete button style (the small pill on the right) */
+#items > div > button {
+  background: transparent;
+  color: var(--danger);
+  border: 2px solid rgba(255,107,107,0.12);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s;
+}
+
+/* Hover and press effects for list delete buttons */
+#items > div > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.10);
+}
+
+#items > div > button:active {
+  transform: translateY(0);
+}
+
+/* Completed style (optional if you add a 'completed' class) */
+#items > div.completed {
+  opacity: 0.72;
+  transform: translateY(-2px);
+  border-left: 4px solid rgba(107,156,255,0.85);
+}
+
+#items > div.completed p {
+  text-decoration: line-through;
+  color: #667085;
+}
+
+/* Small screen adjustments */
+@media (max-width: 540px) {
+  main,
+  body > .todo-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  #itemInput {
+    font-size: 0.95rem;
+  }
+
+  button[onclick="addItem()"] {
+    padding: 10px 12px;
+  }
+
+  #items > div {
+    padding: 10px;
+  }
+}
+
+/* Accessibility focus states */
+button:focus,
+#itemInput:focus,
+#items > div:focus {
+  outline: 3px solid rgba(107,156,255,0.15);
+  outline-offset: 3px;
+}
