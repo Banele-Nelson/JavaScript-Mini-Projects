@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <h1>Luck Test</h1>
+    <p id="comment">lucky or not?</p>
+    <div class="category" >
+        <button id="numberBtn" onclick="numbersCategory()">Number</button>
+        <button id="colorBtn" onclick="colorsCategory()">Color</button>
+        <button id="alphabetBtn" onclick="alphabetCategory()">Alphabet</button>
+    </div>
+    <div id="container">
+        <h2>Guess the <span id="categoryTitle"></span> </h2>
+        <div id="options">
+            
+        </div>
+        <p>score: <span id="score">0</span></p>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

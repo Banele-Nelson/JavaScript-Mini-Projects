@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.category button {
+    background-color: aqua;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.category button:hover {
+    background-color: aquamarine;
+}
+
+.optionBtn {
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.optionBtn:hover {
+    transform: scale(1.2);
+}
+
+#comment {
+    color: blue;
+}
