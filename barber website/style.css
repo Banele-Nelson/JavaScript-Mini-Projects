@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+html {
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+body {
+    min-height: 100vh;
+}
+nav {
+    background-color: grey;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li {
+    height: 60px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover {
+    background-color: burlywood;
+}
+nav li:first-child {
+    margin-right: auto;
+}
+.logo:hover {
+    background-color: grey;
+}
+.sidebar {
+    position:fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: white transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;    
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(192, 147, 85) ;
+}
+#logo:hover {
+    transform: scale(1.1);
+}
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+#bars {
+    font-size: 30px;
+    font-weight: 800;
+}
+#x-icon {
+    font-size: 20px;
+    font-weight: 800;
+}
+#bars {
+    display: none;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+}
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/barbers.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.home-content {
+    margin-top: 15%;
+    height: 500px;
+    text-align: center;
+    flex-direction: column;
+    color: burlywood;
+}
+.home-content h1 {
+    font-size: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.home-content p {
+    font-size: 30px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons i {
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    background: burlywood;
+    margin: 3px;
+}
+i:hover {
+    transform: scale(1.1);
+}
+.prices-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: auto;
+    padding: 20px 0;
+    background: grey;
+}
+.prices-image {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    width: max-content;
+}
+.prices-image img {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+.prices-image img:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+.prices-image {
+    scrollbar-width: none;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    color: burlywood;
+    margin-bottom: 30px;
+}
+.contacts-section {
+    background-image: url(images/barbershop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contacts-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 20px;
+}
+.contacts-content P {
+    color: burlywood;
+    font-size: 30px;
+    padding: 10px;
+}
+.contacts-section h3 {
+    padding: 30px;
+    color: grey;
+}
+
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    #bars {
+        display: block;
+    }
+}
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%
+    }
+}

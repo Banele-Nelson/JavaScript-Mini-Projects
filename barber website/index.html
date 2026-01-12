@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.webp" type="logo/webp">
+    <script src="https://kit.fontawesome.com/c87b8a86f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a id="x-icon" href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#styles">Styles</a></li>
+            <li><a href="#prices">Prices</a></li>
+        </ul>
+        <ul>
+            <li><a class="logo" href="#home"><img id="logo" src="images/logo.webp" alt=""></a></li>
+            <li class="hideOnMobile" ><a href="#home">Home</a></li>
+            <li class="hideOnMobile" ><a href="#styles">Styles</a></li>
+            <li class="hideOnMobile" ><a href="#prices">Prices</a></li>
+            <li id="bars" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+        </ul>   
+    </nav>
+    <section class="home-section" id="home">
+        <div class="home-content">
+            <h1>Hair Studio</h1>
+            <p>Your Hair Is Your Crown</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#">><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="prices-section" id="styles">
+        <h3>STYLES</h3>
+        <div class="prices-image">
+            <img src="images/bald.png" alt="">
+            <img src="images/fade.png" alt="">
+            <img src="images/waves.png" alt="">
+        </div>
+    </section>
+    <section id="prices" class="contacts-section">
+        <h3>PRICES</h3>
+        <div class="contacts-content">
+            <p>FADES : R30</p>
+            <p>FADES & DYE: R50</p>
+            <p>FADES & DYE & LINE-DESIGNS: R80</p>
+            <P>BRUSH & CHISKOP : R25</P>
+            <P>TRIM : R15</P>
+            <P>BEARD : R15</P>
+            <P>HAIR-WASH : R30</P>
+            <P>BUFF & SHINE : R50</P>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
