@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li><a onclick=hideSidebar() href="#">X</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#combo">Combos</a></li>
+                <li><a href="price">Prices</a></li>
+            </ul>
+            <ul >
+                <li><a href="#"><img src="assets/restaurant-icon-png-7.png" alt=""></a></li>
+                <li><a class="hideOnMobile" href="#home">Home</a></li>
+                <li><a class="hideOnMobile" href="#combo">Combos</a></li>
+                <li><a class="hideOnMobile" href="#price">Prices</a></li>
+                <li><a id="bars" onclick=openSidebar() href="#">≡</a></li>
+            </ul>    
+        </nav>
+    </header>
+    <section id="home" class="home-section">
+        <img src="assets/burger.webp" alt="" class="burger">
+        <img src="assets/drink.png" alt="" class="drink">
+        <img src="assets/fries.webp" alt="" class="fries">
+        <h1 class="heading">GOOD FOOD</h1>
+    </section>
+    <section id="combo" class="combo-section">
+        <h1>nice meals for everyone</h1>
+        <div class="img-container">
+            <div class="burger-combo">
+                <img src="assets/burger-combo.png" alt="">
+                <div class="text-content">
+                    <h3>Burger Meal</h3>
+                    <p>1 Large Burger, Medium Fries, 1 Large Drink</p>
+                </div>
+            </div>
+            <div class="burger-combo">
+                <img src="assets/chicken-combo.png" alt="">
+                <div class="text-content">
+                    <h3>Chicken Meal</h3>
+                    <p>3 Chicken pieces, Medium Fries, 1 Large Drink</p>
+                </div>   
+            </div>
+            <div class="burger-combo">
+                <img src="assets/pizza-combo.png" alt="">
+                <div class="text-content">
+                    <h3>Pizza Meal</h3>
+                    <p>1 Large Pizza, 1 Large Milkshake</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
